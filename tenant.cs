@@ -46,18 +46,8 @@ namespace шарпик8
             set => patronymic = value;
         }
 
-        public tenant() { } //Конструктор без параметров
 
-        public tenant(string value) //Конструктор с одним параметром
-
-        {
-
-            name = value;
-
-        }
-
-
-        public tenant(String n, String s, String p, date D1) //Конструктор со всеми параметрами
+        public void init1(String n, String s, String p, date D1) //Метод создания
 
         {
 
@@ -68,8 +58,6 @@ namespace шарпик8
             patronymic = p;
 
             date tndD = D1;
-
-
 
         }
 
