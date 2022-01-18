@@ -1,10 +1,10 @@
-п»їusing System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace С€Р°СЂРїРёРє8
+namespace шарпик8
 
 {
 
@@ -12,17 +12,17 @@ namespace С€Р°СЂРїРёРє8
 
     {
 
-        String name; //РёРјСЏ
+        String name; //имя
 
-        String surname; //С„Р°РјРёР»РёСЏ
+        String surname; //фамилия
 
-        String patronymic; //РѕС‚С‡РµСЃС‚РІРѕ
+        String patronymic; //отчество
 
-        static int quantityA = 0; // СЃС‚Р°С‚РёС‡РµСЃРєРѕРµ РїРѕР»Рµ РєРѕР»-РІР° Р°РґРјРёРЅРёСЃС‚СЂР°С‚РѕСЂРѕРІ РЅР° РјРµСЃС‚Рµ
+        static int quantityA = 0; // статическое поле кол-ва администраторов на месте
 
-        private readonly date tntD; // СЃРІСЏР·РєР° СЃ РєР»Р°СЃСЃРѕРј РґР°С‚Р°
+        private readonly date tntD; // связка с классом дата
 
-        public static int CheckRetirementStatus() // СЃС‚Р°С‚РёС‡РµСЃРєРёР№ РјРµС‚РѕРґ
+        public static int CheckRetirementStatus() // статический метод
         {
 
             quantityA++;
@@ -46,9 +46,9 @@ namespace С€Р°СЂРїРёРє8
             set => patronymic = value;
         }
 
-        public tenant() { } //РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ Р±РµР· РїР°СЂР°РјРµС‚СЂРѕРІ
+        public tenant() { } //Конструктор без параметров
 
-        public tenant(string value) //РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃ РѕРґРЅРёРј РїР°СЂР°РјРµС‚СЂРѕРј
+        public tenant(string value) //Конструктор с одним параметром
 
         {
 
@@ -57,7 +57,7 @@ namespace С€Р°СЂРїРёРє8
         }
 
 
-        public tenant(String n, String s, String p, date D1) //РљРѕРЅСЃС‚СЂСѓРєС‚РѕСЂ СЃРѕ РІСЃРµРјРё РїР°СЂР°РјРµС‚СЂР°РјРё
+        public tenant(String n, String s, String p, date D1) //Конструктор со всеми параметрами
 
         {
 
@@ -69,37 +69,37 @@ namespace С€Р°СЂРїРёРє8
 
             date tndD = D1;
 
-            
+
 
         }
 
-        public void enterT() //РњРµС‚РѕРґ РІРІРѕРґР°
+        public void enterT() //Метод ввода
 
         {
 
-            Console.Write("\nР’РІРµРґРёС‚Рµ РёРјСЏ: ");
+            Console.Write("\nВведите имя: ");
 
             name = Console.ReadLine();
 
-            Console.Write("\nР’РІРµРґРёС‚Рµ С„Р°РјРёР»РёСЋ: ");
+            Console.Write("\nВведите фамилию: ");
 
             surname = Console.ReadLine();
 
-            Console.Write("\nР’РІРµРґРёС‚Рµ РѕС‚С‡РµСЃС‚РІРѕ: ");
+            Console.Write("\nВведите отчество: ");
 
             patronymic = Console.ReadLine();
 
-            Console.Write("\nР’РІРµРґРёС‚Рµ РґРµРЅСЊ СЂРѕР¶РґРµРЅРёСЏ\n");
+            Console.Write("\nВведите день рождения\n");
 
         }
 
-        public int printer() //РњРµС‚РѕРґ РІС‹РІРѕРґР°
+        public int printer() //Метод вывода
 
         {
 
-            Console.WriteLine($"\nРРјСЏ: {this.Name} Р¤Р°РјРёР»РёСЏ: {this.Surname} РћС‚С‡РµСЃС‚РІРѕ: {this.Patronymic} ");
+            Console.WriteLine($"\nИмя: {this.Name} Фамилия: {this.Surname} Отчество: {this.Patronymic} ");
 
-            Console.WriteLine($"\nР”РµРЅСЊ СЂРѕР¶РґРµРЅРёСЏ {tntD} ");
+            Console.WriteLine($"\nДень рождения {tntD} ");
 
             return 0;
 
